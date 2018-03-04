@@ -1,0 +1,12 @@
+R1AR1>en
+R1AR1#conf t
+R1AR1(config)#router ospf 1
+R1AR1(config-router)#router-id 3.3.3.3
+R1AR1(config-router)#network 192.168.1.0 0.0.0.255 area 1
+R1AR1(config-router)#network 192.168.2.0 0.0.0.255 area 1
+R1AR1(config-router)#exit
+R1AR1(config)#router ospf 1
+R1AR1(config-router)#network 192.168.0.0 0.0.255.255 area 1
+R1AR1(config-router)#exit
+R1AR1(config)#router ospf 1
+R1AR1(config-router)#area 1 stub

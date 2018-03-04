@@ -1,0 +1,6 @@
+ASBR(config)#ip route 1.0.0.0 255.0.0.0 null 0
+ASBR(config)#ip route 2.0.0.0 255.0.0.0 null 0
+ASBR(config)#ip route 3.0.0.0 255.0.0.0 null 0
+ASBR(config)#route ospf 1
+ASBR(config-router)#router-id 4.4.4.4
+ASBR(config-router)#network 192.168.2.0 0.0.0.255 area 1

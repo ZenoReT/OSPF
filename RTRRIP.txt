@@ -1,0 +1,21 @@
+Router#conf t
+Router(config)#interface loopback 1
+Router(config-if)#ip address 172.20.0.1 255.255.255.0
+Router(config-if)#exit
+Router(config)#interface loopback 2
+Router(config-if)#no shutdown 
+Router(config-if)#ip address 172.20.1.1 255.255.255.0
+Router(config-if)#exit
+Router(config)#interface loopback 3
+Router(config-if)#no shutdown 
+Router(config-if)#ip address 172.20.2.1 255.255.255.0
+Router(config-if)#exit
+Router(config)#router rip
+Router(config-router)#version 2
+Router(config-router)#network 172.20.0.1
+Router(config-router)#network 172.20.1.1
+Router(config-router)#network 172.20.2.1
+Router(config)#interface se 2/0
+Router(config-if)#no shutdown
+Router(config-if)#ip address 10.3.3.2 255.255.255.0
+Router(config-if)#exit
