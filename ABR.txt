@@ -12,3 +12,5 @@ ABR(config-if)#no shutdown
 ABR(config-if)#exit
 ABR(config)#router ospf 1
 ABR(config-router)#network 192.168.1.0 0.0.0.255 area 1
+ABR(config-router)#area 1 stub
+ABR(config-router)#exit
